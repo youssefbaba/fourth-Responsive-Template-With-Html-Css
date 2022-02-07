@@ -20,6 +20,7 @@ body {
     --secondary-color: #0b093b;
     --third-color: #7620ff;
     --section-padding: 50px;
+    --color-background: #f5f5f5;
 }
 
 .container {
@@ -51,6 +52,45 @@ ul {
         width: 1140px;
     }
 }
+
+/* Start Compenent */
+.main-heading {
+    margin-bottom: var(--section-padding);
+    text-align: center;
+}
+
+.main-heading h2 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 2;
+    color: var(--secondary-color);
+}
+
+.main-heading p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 2.30;
+    color: var(--secondary-color);
+}
+
+@media (min-width: 992px) {
+    .main-heading {
+        text-align: left;
+    }
+
+    .main-heading h2 {
+        font-size: 40px;
+        line-height: 1.5;
+    }
+
+    .main-heading p {
+        max-width: 760px;
+        font-size: 15px;
+        line-height: 2;
+    }
+}
+
+/* End Compenent */
 
 
 /* End Css Globale  Rules */
@@ -194,7 +234,7 @@ header .container nav ul:last-child li:last-child a:hover {
     }
 
     header .container nav ul:last-child li:last-child a {
-        background-color: #f5f5f5;
+        background-color: var(--color-background);
     }
 }
 
@@ -207,15 +247,15 @@ header .container nav ul:last-child li:last-child a:hover {
 /* End Header */
 /* Start Landing */
 .landing {
+    background-color: var(--white-color);
     position: relative;
     top: 100px;
-    border: 1px solid red;
+    padding-bottom: var(--section-padding);
 }
 
 .landing .container {
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .landing .color-div {
@@ -227,6 +267,7 @@ header .container nav ul:last-child li:last-child a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 4;
 }
 
 .landing .container .image .first-image {
@@ -241,14 +282,15 @@ header .container nav ul:last-child li:last-child a:hover {
 }
 
 .landing .container .quote {
-    max-width: 337px;
+    max-width: 340px;
     padding: 30px;
     background-color: var(--secondary-color);
     position: absolute;
     left: -30px;
     bottom: -20px;
     right: -10%;
-    border-radius: 15px
+    border-radius: 15px;
+    z-index: 4;
 }
 
 .landing .container .quote::before {
@@ -285,7 +327,7 @@ header .container nav ul:last-child li:last-child a:hover {
     text-align: center;
 }
 
-.landing .container .info h2 {
+.landing .container .info h1 {
     font-weight: 600;
     font-size: 45px;
     line-height: 1.6;
@@ -299,7 +341,6 @@ header .container nav ul:last-child li:last-child a:hover {
     font-size: 13px;
     line-height: 1.92;
     color: var(--secondary-color);
-
 }
 
 .landing .container .info a {
@@ -320,7 +361,7 @@ header .container nav ul:last-child li:last-child a:hover {
     background-color: #4e07c1
 }
 
-.landing .container .image .second-image img:last-of-type {
+.landing .container .image .second-image img {
     display: none;
 }
 
@@ -332,7 +373,7 @@ header .container nav ul:last-child li:last-child a:hover {
 }
 
 @media (min-width: 768px) {
-    .landing .container .info h2 {
+    .landing .container .info h1 {
         margin-top: 40px;
     }
 
@@ -347,13 +388,12 @@ header .container nav ul:last-child li:last-child a:hover {
         top: 200px;
     }
 
-    .landing .container .image .second-image img:last-of-type {
+    .landing .container .image .second-image img {
         display: block;
         position: absolute;
         right: -7vw;
         top: 50%;
         transform: translateY(-50%);
-        z-index: -1;
     }
 
     .landing .container {
@@ -375,12 +415,12 @@ header .container nav ul:last-child li:last-child a:hover {
     .landing .color-div {
         display: block;
         position: absolute;
-        background-color: #f5f5f5;
+        background-color: var(--color-background);
         height: 100%;
         width: 400px;
         right: 0;
         top: -100px;
-        z-index: -2;
+        z-index: 2;
     }
 
     .landing .container .quote p,
@@ -389,9 +429,14 @@ header .container nav ul:last-child li:last-child a:hover {
         line-height: 1.66;
     }
 
-    .landing .container .info h2 {
+    .landing .container .info h1 {
         font-size: 66px;
         line-height: 1.5;
+    }
+
+    .landing .container .info p {
+        font-size: 15px;
+        line-height: 1.66;
     }
 
     .landing .container .info a {
@@ -402,20 +447,27 @@ header .container nav ul:last-child li:last-child a:hover {
 /* End Landing */
 /* Start Partners */
 .partners {
-    padding-top: calc(var(--section-padding) * 2);
+    padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     margin-top: 100px;
-    border: 1px solid blue;
+    background-color: var(--color-background);
 }
 
+.partners .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
 
+.partners .container .partner {
+    cursor: pointer;
+}
 
-
-
-
-
-
-
+.partners .container .partner:hover svg path {
+    fill: var(--third-color);
+}
 
 @media (min-width: 992px) {
     .partners {
@@ -424,3 +476,94 @@ header .container nav ul:last-child li:last-child a:hover {
 }
 
 /* End Partners */
+/*  Start Services  */
+.services {
+    background-color: var(--white-color);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.services .container .content-services .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.services .container .content-services .service img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.services .container .content-services .service h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.66;
+    color: var(--secondary-color);
+}
+
+.services .container .content-services .service p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--secondary-color);
+}
+
+@media (min-width: 992px) {
+
+    .services .container .content-services {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+    }
+
+    .services .container .content-services .service {
+        align-items: flex-start;
+        text-align: left;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .services .container .content-services .service h4 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .services .container .content-services .service p {
+        font-size: 15px;
+        line-height: 1.73;
+    }
+}
+
+/*  End Services  */
+/* Start Creativity  */
+.creativity {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--color-background);
+}
+
+.creativity .container {}
+
+.creativity .container .images {}
+
+.creativity .container .images img {}
+
+.creativity .container .images img {}
+
+.creativity .container .info {}
+
+.creativity .container .info {}
+
+.creativity .container .info p {}
+
+.creativity .container .info h2 {}
+
+.creativity .container .info .links {}
+
+.creativity .container .info .links a {}
+
+/* End Creativity  */
