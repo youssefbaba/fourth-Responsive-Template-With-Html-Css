@@ -61,8 +61,8 @@ ul {
 
 .main-heading h2 {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 2;
+    font-size: 28px;
+    line-height: 2.14;
     color: var(--secondary-color);
 }
 
@@ -629,8 +629,8 @@ header .container nav ul:last-child li:last-child a:hover {
 
 .creativity .container .content-creativity .info h2 {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 2;
+    font-size: 28px;
+    line-height: 2.14;
 }
 
 .creativity .container .content-creativity .info .links a {
@@ -753,7 +753,7 @@ header .container nav ul:last-child li:last-child a:hover {
 }
 
 .projects .container .content-projects .project .text h4 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
     line-height: 1.66;
     margin-bottom: 20px;
@@ -868,8 +868,8 @@ header .container nav ul:last-child li:last-child a:hover {
 
 .second-creativity .container .content-second-creativity .info h2 {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 2;
+    font-size: 28px;
+    line-height: 2.14;
 }
 
 .second-creativity .container .content-second-creativity .info .links a {
@@ -909,6 +909,7 @@ header .container nav ul:last-child li:last-child a:hover {
 @media (min-width: 992px) {
     .second-creativity {
         height: 520px;
+        margin-bottom: var(--section-padding);
     }
 
     .second-creativity .container .content-second-creativity {
@@ -951,3 +952,286 @@ header .container nav ul:last-child li:last-child a:hover {
 }
 
 /* End Second Creativity */
+/* Start Blogs */
+.blogs {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.blogs .container .content-section-blogs {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.blogs .container .content-section-blogs .blog {
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.blogs .container .content-section-blogs .blog:hover {
+    opacity: 0.5;
+}
+
+.blogs .container .content-section-blogs .blog h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.66;
+}
+
+.blogs .container .content-section-blogs .blog p:first-of-type {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 2;
+    margin: 25px 0;
+}
+
+.blogs .container .content-section-blogs .blog p:last-of-type {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.53;
+    margin-bottom: 15px;
+}
+
+.blogs .container .content-section-blogs .blog a {
+    display: block;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--secondary-color);
+    background-color: #C4FFFF;
+    border: 1px solid #C4FFFF;
+}
+
+@media (min-width:768px) {
+    .blogs .container .content-section-blogs {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:992px) {
+    .blogs .container .content-section-blogs .blog h4 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .blogs .container .content-section-blogs .blog p:first-of-type {
+        font-size: 15px;
+        line-height: 1.73;
+    }
+
+    .blogs .container .content-section-blogs .blog p:last-of-type {
+        font-size: 15px;
+        line-height: 1.33;
+    }
+
+    .blogs .container .content-section-blogs .blog a {
+        font-size: 15px;
+    }
+}
+
+/* End Blogs */
+/* Start Quotations */
+.quotations {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--color-background);
+}
+
+.quotations .container .content-section-quotations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.quotations .container .content-section-quotations .quote {
+    padding: 30px;
+    background-color: var(--secondary-color);
+    position: relative;
+    border-radius: 15px;
+}
+
+.quotations .container .content-section-quotations .quote::before {
+    content: '"';
+    position: absolute;
+    color: #f2b300;
+    font-size: 174px;
+    font-style: italic;
+    font-weight: 500;
+    top: -39px;
+    left: 50%;
+    transform: translateX(-100%);
+}
+
+.quotations .container .content-section-quotations .quote p,
+.quotations .container .content-section-quotations .quote span {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.92;
+}
+
+.quotations .container .content-section-quotations .quote p {
+    color: var(--white-color)
+}
+
+.quotations .container .content-section-quotations .quote span {
+    display: block;
+    width: fit-content;
+    color: #f2b300;
+    margin: 15px 0 0 auto;
+}
+
+@media (min-width: 992px) {
+
+    .quotations .container .content-section-quotations .quote p,
+    .quotations .container .content-section-quotations .quote span {
+        font-size: 15px;
+        line-height: 1.66;
+    }
+
+}
+
+/* End Quotations */
+/* Start Pricing */
+.pricings {
+    background-color: var(--white-color);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.pricings .container {}
+
+.pricings .container .content-section-pricings {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricings .container .content-section-pricings .pricing:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.pricings .container .content-section-pricings .pricing .header {
+    color: var(--secondary-color);
+}
+
+.pricings .container .content-section-pricings .pricing .header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricings .container .content-section-pricings .pricing .header>div img {
+    width: 40px;
+    height: 40px;
+}
+
+.pricings .container .content-section-pricings .pricing .header>div span,
+.pricings .container .content-section-pricings .pricing .header span {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.84;
+}
+
+.pricings .container .content-section-pricings .pricing .header span.type {
+    display: block;
+    margin: 20px 0;
+}
+
+.pricings .container .content-section-pricings .pricing .header p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.pricings .container .content-section-pricings .pricing .body ul li {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.66;
+    padding: 8px 40px;
+    position: relative;
+}
+
+.pricings .container .content-section-pricings .pricing:nth-child(1) .body ul li:nth-child(-n+2)::before,
+.pricings .container .content-section-pricings .pricing:nth-child(2) .body ul li:nth-child(-n+4)::before,
+.pricings .container .content-section-pricings .pricing:nth-child(3) .body ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #49CB86;
+    margin-right: 8px;
+    position: absolute;
+    left: 20px;
+    transform: translateX(-50%);
+}
+
+.pricings .container .content-section-pricings .pricing .footer a {
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    color: var(--white-color);
+    transition: background-color 0.3s;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricings .container .content-section-pricings .pricing .footer a:hover {
+    background-color: #4e07c1;
+}
+
+@media (min-width:768px) {
+    .pricings .container .content-section-pricings {
+        max-width: 60%;
+    }
+}
+
+@media (min-width:992px) {
+    .pricings .container .content-section-pricings {
+        max-width: 100%;
+    }
+
+    .pricings .container .content-section-pricings {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+
+    .pricings .container .content-section-pricings .pricing:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .pricings .container .content-section-pricings .pricing .header>div span,
+    .pricings .container .content-section-pricings .pricing .header span {
+        font-size: 30px;
+        line-height: 1.53;
+    }
+
+    .pricings .container .content-section-pricings .pricing .header p {
+        font-size: 15px;
+        line-height: 1.73;
+    }
+
+    .pricings .container .content-section-pricings .pricing .body ul li {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .pricings .container .content-section-pricings .pricing .footer a {
+        font-size: 15px;
+    }
+}
+
+/* End Pricing */
