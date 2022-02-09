@@ -646,6 +646,8 @@ header .container nav ul:last-child li:last-child a:hover {
     background-color: transparent;
     border: 1px solid var(--secondary-color);
     transition: color 0.3s, border-color 0.3s;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .creativity .container .content-creativity .info .links a:last-of-type:hover {
@@ -888,6 +890,8 @@ header .container nav ul:last-child li:last-child a:hover {
     background-color: transparent;
     border: 1px solid var(--secondary-color);
     transition: color 0.3s, border-color 0.3s;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .second-creativity .container .content-second-creativity .info .links a:last-of-type:hover {
