@@ -90,7 +90,7 @@ ul {
     }
 }
 
-a.links {
+.general-link {
     display: block;
     text-decoration: none;
     width: 124px;
@@ -98,13 +98,9 @@ a.links {
     line-height: 45px;
     text-align: center;
     border-radius: 25px;
-    font-weight: 500;
-    font-size: 13px;
 }
 
 /* End Compenent */
-
-
 /* End Css Globale  Rules */
 /* Start Header */
 
@@ -167,18 +163,17 @@ header .container nav ul li a {
     display: block;
     text-decoration: none;
     font-weight: 500;
+    font-size: 15px;
     transition: color 0.3s;
 }
 
 header .container nav ul:first-child li a {
     padding: 20px 12px;
     color: var(--white-color);
-    font-size: 20px;
 }
 
 header .container nav ul:last-child li a {
-    padding: 12px;
-    font-size: 15px;
+    padding: 10px;
 }
 
 header .container nav ul:last-child li:first-child a {
@@ -186,11 +181,9 @@ header .container nav ul:last-child li:first-child a {
 }
 
 header .container nav ul:last-child li:last-child a {
-    width: fit-content;
+    padding: 0;
     background-color: var(--white-color);
     color: var(--secondary-color);
-    border-radius: 25px;
-    transition: color 0.3s;
 }
 
 header .container nav ul:first-child li a:hover {
@@ -265,16 +258,11 @@ header .container nav ul:last-child li:last-child a:hover {
     padding-bottom: var(--section-padding);
 }
 
-.landing .container {
-    display: flex;
-    flex-direction: column;
-}
-
 .landing .color-div {
     display: none;
 }
 
-.landing .container .image {
+.landing .container .images {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -282,15 +270,14 @@ header .container nav ul:last-child li:last-child a:hover {
     z-index: 4;
 }
 
-.landing .container .image .first-image {
+.landing .container .images .first-image {
     position: relative;
 }
 
-.landing .container .image .first-image img {
+.landing .container .images .first-image img {
     display: block;
-    border-radius: 15px;
     max-width: 100%;
-    height: 100%;
+    border-radius: 15px;
 }
 
 .landing .container .quote {
@@ -300,9 +287,8 @@ header .container nav ul:last-child li:last-child a:hover {
     position: absolute;
     left: -30px;
     bottom: -20px;
-    right: -10%;
     border-radius: 15px;
-    z-index: 4;
+    width: 120%;
 }
 
 .landing .container .quote::before {
@@ -332,7 +318,8 @@ header .container nav ul:last-child li:last-child a:hover {
     display: block;
     width: fit-content;
     color: #f2b300;
-    margin: 15px 0 0 auto;
+    margin-left: auto;
+    margin-top: 15px;
 }
 
 .landing .container .info {
@@ -361,31 +348,21 @@ header .container nav ul:last-child li:last-child a:hover {
     border: 1px solid var(--third-color);
     margin: 45px auto 0;
     transition: background-color 0.3s;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .landing .container .info a:hover {
     background-color: #4e07c1
 }
 
-.landing .container .image .second-image img {
+.landing .container .images .second-image {
     display: none;
 }
 
 @media (max-width: 575px) {
-    .landing .container .image .first-image {
+    .landing .container .images .first-image {
         width: 80%;
-    }
-
-}
-
-@media (min-width: 768px) {
-    .landing .container .info h1 {
-        margin-top: 40px;
-    }
-
-    .landing .container .quote {
-        left: -30px;
-        bottom: 20px;
     }
 }
 
@@ -394,27 +371,29 @@ header .container nav ul:last-child li:last-child a:hover {
         top: 200px;
     }
 
-    .landing .container .image .second-image img {
+    .landing .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .landing .container .images .second-image {
         display: block;
         position: absolute;
         right: -7vw;
         top: 50%;
         transform: translateY(-50%);
-    }
-
-    .landing .container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        z-index: -1;
     }
 
     .landing .container .info {
+        flex-basis: 470px;
         order: -1;
         text-align: left;
-        flex-basis: 470px;
     }
 
     .landing .container .info a {
+        font-size: 15px;
         margin: 45px 0 0 0;
     }
 
@@ -423,10 +402,9 @@ header .container nav ul:last-child li:last-child a:hover {
         position: absolute;
         background-color: var(--color-background);
         height: 100%;
-        width: 400px;
+        width: 500px;
         right: 0;
         top: -100px;
-        z-index: 2;
     }
 
     .landing .container .quote p,
@@ -438,15 +416,12 @@ header .container nav ul:last-child li:last-child a:hover {
     .landing .container .info h1 {
         font-size: 66px;
         line-height: 1.5;
+        margin-top: 0;
     }
 
     .landing .container .info p {
         font-size: 15px;
         line-height: 1.66;
-    }
-
-    .landing .container .info a {
-        font-size: 15px;
     }
 }
 
@@ -455,7 +430,7 @@ header .container nav ul:last-child li:last-child a:hover {
 .partners {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
-    margin-top: 100px;
+    margin-top: calc(var(--section-padding) * 2);
     background-color: var(--color-background);
 }
 
@@ -477,7 +452,7 @@ header .container nav ul:last-child li:last-child a:hover {
 
 @media (min-width: 992px) {
     .partners {
-        margin-top: 200px;
+        margin-top: calc(var(--section-padding) * 4);
     }
 }
 
@@ -509,7 +484,6 @@ header .container nav ul:last-child li:last-child a:hover {
 }
 
 .services .container .content-services .service img {
-    display: block;
     width: 40px;
     height: 40px;
 }
@@ -568,6 +542,10 @@ header .container nav ul:last-child li:last-child a:hover {
     padding-bottom: var(--section-padding);
     background-color: var(--color-background);
     margin-top: var(--section-padding);
+}
+
+.creativity .container {
+    background-color: dodgerblue;
 }
 
 .creativity .container .content-creativity {
@@ -659,6 +637,8 @@ header .container nav ul:last-child li:last-child a:hover {
     color: var(--white-color);
     transition: background-color 0.3s;
     margin-right: 15px;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .creativity .container .content-creativity .info .links a:first-of-type:hover {
@@ -723,7 +703,8 @@ header .container nav ul:last-child li:last-child a:hover {
         line-height: 1.5;
     }
 
-    .creativity .container .content-creativity .info .links a {
+    .creativity .container .content-creativity .info .links a:first-of-type,
+    .creativity .container .content-creativity .info .links a:last-of-type {
         font-size: 15px;
     }
 }
@@ -786,6 +767,8 @@ header .container nav ul:last-child li:last-child a:hover {
     background-color: var(--third-color);
     margin: 45px auto 0;
     transition: background-color 0.3s;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .projects .container .footer a:hover {
@@ -898,6 +881,8 @@ header .container nav ul:last-child li:last-child a:hover {
     color: var(--white-color);
     transition: background-color 0.3s;
     margin-right: 15px;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .second-creativity .container .content-second-creativity .info .links a:first-of-type:hover {
@@ -954,7 +939,6 @@ header .container nav ul:last-child li:last-child a:hover {
     .second-creativity .container .content-second-creativity .info p:last-of-type {
         font-size: 15px;
         line-height: 1.66;
-
     }
 
     .second-creativity .container .content-second-creativity .info h2 {
@@ -962,7 +946,8 @@ header .container nav ul:last-child li:last-child a:hover {
         line-height: 1.5;
     }
 
-    .second-creativity .container .content-second-creativity .info .links a {
+    .second-creativity .container .content-second-creativity .info .links a:first-of-type,
+    .second-creativity .container .content-second-creativity .info .links a:last-of-type {
         font-size: 15px;
     }
 }
@@ -1200,6 +1185,8 @@ header .container nav ul:last-child li:last-child a:hover {
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .pricings .container .content-section-pricings .pricing .footer a:hover {
@@ -1334,17 +1321,18 @@ header .container nav ul:last-child li:last-child a:hover {
 @media (min-width: 992px) {
     .contact-us .container .content-section-contact-us {
         display: grid;
-        grid-template-columns: 475px 1fr;
+        grid-template-columns: 475px auto;
         align-items: center;
+        justify-content: space-between;
     }
 
     .contact-us .container .content-section-contact-us .images {
         margin-left: initial;
         margin-right: initial;
-        justify-self: end;
     }
 
     .contact-us .container .content-section-contact-us form input[type="submit"] {
+        font-size: 15px;
         margin-bottom: 0;
     }
 
@@ -1353,14 +1341,9 @@ header .container nav ul:last-child li:last-child a:hover {
         line-height: 1.33;
     }
 
-    .contact-us .container .content-section-contact-us form input[type="submit"] {
-        font-size: 15px;
-    }
-
     .contact-us .container .content-section-contact-us form input::placeholder {
         font-size: 18px;
         line-height: 1.66;
-
     }
 }
 
@@ -1370,7 +1353,6 @@ footer {
     background-color: var(--secondary-color);
     padding-top: calc(var(--section-padding) / 2);
     padding-bottom: calc(var(--section-padding) / 2);
-
 }
 
 footer .container {
@@ -1383,10 +1365,10 @@ footer .container a:first-of-type svg text {
 
 footer .container p {
     color: var(--white-color);
-    margin-top: 20px;
     font-weight: 500;
     font-size: 13px;
     line-height: 1.38;
+    margin-top: 20px;
 }
 
 footer .container p span {
@@ -1402,7 +1384,6 @@ footer .container a:last-of-type {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        text-align: left;
     }
 
     footer .container p {
@@ -1412,14 +1393,13 @@ footer .container a:last-of-type {
     }
 
     footer .container a:last-of-type {
-        text-decoration: none;
         display: block;
+        text-decoration: none;
         color: var(--white-color);
         font-weight: 500;
         font-size: 15px;
         line-height: 1.2;
     }
-
 }
 
 /* End Footer */
