@@ -544,10 +544,6 @@ header .container nav ul:last-child li:last-child a:hover {
     margin-top: var(--section-padding);
 }
 
-.creativity .container {
-    background-color: dodgerblue;
-}
-
 .creativity .container .content-creativity {
     max-width: 80%;
     margin-right: auto;
@@ -670,8 +666,8 @@ header .container nav ul:last-child li:last-child a:hover {
 
     .creativity .container .content-creativity {
         display: grid;
-        grid-template-columns: 475px 1fr;
-        justify-items: end;
+        grid-template-columns: 475px auto;
+        justify-content: space-between;
     }
 
     .creativity .container .content-creativity .images {
@@ -816,7 +812,6 @@ header .container nav ul:last-child li:last-child a:hover {
 
 /* End Projects */
 /* Start Second Creativity */
-
 .second-creativity {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -831,12 +826,11 @@ header .container nav ul:last-child li:last-child a:hover {
 }
 
 .second-creativity .container .content-second-creativity .images {
-    width: fit-content;
+    display: flex;
+    justify-content: center;
     position: relative;
     top: -100px;
     margin-bottom: -100px;
-    margin-right: auto;
-    margin-left: auto;
     border-radius: 15px;
 }
 
@@ -915,8 +909,8 @@ header .container nav ul:last-child li:last-child a:hover {
 
     .second-creativity .container .content-second-creativity {
         display: grid;
-        grid-template-columns: 500px 1fr;
-        justify-items: start;
+        grid-template-columns: 430px 1fr;
+        gap: 80px;
     }
 
     .second-creativity .container .content-second-creativity .images {
